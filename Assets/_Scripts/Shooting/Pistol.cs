@@ -6,7 +6,7 @@ namespace _Scripts.Shooting
     {
         public override void Shoot()
         {
-            bulletsAmount = GameManager.pistolBulletsLeft;
+            bulletsLeft = GameManager.pistolBulletsLeft;
             if (GameManager.pistolBulletsLeft <= 0) return;
             var shootEffect = Instantiate(shootParticle, shootingOrigin.position, Quaternion.identity);
             shootEffect.Play();

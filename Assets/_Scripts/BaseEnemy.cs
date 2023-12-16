@@ -122,11 +122,10 @@ namespace _Scripts
 
         private IEnumerator UpgradeMe()
         {
-            print("starat");
             transform.position = new Vector3(1000, 1000, 1000);
             yield return new WaitForSeconds(5);
             thisPos = _instantiatePoints[Random.Range(0, _instantiatePoints.Length)].transform.position + transform.up;
-            print("finish");
+            print(thisPos);
         }
 
         private void OnDrawGizmos()

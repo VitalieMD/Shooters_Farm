@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 1738701851635210796}
   m_Layer: 0
   m_Name: Sci_Fi_Pistol_#1_prefab
-  m_TagString: Untagged
+  m_TagString: Pistol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,15 +133,21 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   shootingOrigin: {fileID: 5870917697874812595}
   shootParticle: {fileID: 198000012944515248, guid: 2e4f0bd29edf94444851c0bf24b0358a, type: 3}
-  shootAudio: {fileID: 8300000, guid: 9c2c4605aa1a9f348bd294043165dc14, type: 3}
+  shootAudio: {fileID: 8300000, guid: 1012f8cd35a670d4ca14a101e91ca3ea, type: 3}
+  recharging: {fileID: 8300000, guid: 86fc56d48a9dd5541b99f438b9247733, type: 3}
+  outOfAmmo:
+  - {fileID: 8300000, guid: a0f5686d6e024f44eb8836531830e193, type: 3}
+  - {fileID: 8300000, guid: f16b37d9a93242f4681aacfef89d310a, type: 3}
   audioSource: {fileID: 1738701851635210796}
   gunRange: 35
   fireRate: 0.4
   fireTimer: 0
-  damage: 5
-  bulletsAmount: 9
-  bulletAmountReset: 0
+  damage: 10
+  reloadTime: 3
+  bulletsLeft: 9
+  magazineCapacity: 9
   bulletHole: {fileID: 2728138223538081298, guid: 35f4589b997fe964e98ad4390c7fae52, type: 3}
+  isReloading: 0
 --- !u!82 &1738701851635210796
 AudioSource:
   m_ObjectHideFlags: 0

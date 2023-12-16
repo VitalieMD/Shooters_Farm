@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8237990456947447912}
   m_Layer: 0
   m_Name: SciFiGunHeavyBlue
-  m_TagString: Untagged
+  m_TagString: Rifle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,15 +197,21 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   shootingOrigin: {fileID: 5984346708447838230}
   shootParticle: {fileID: 198000012944515248, guid: 2e4f0bd29edf94444851c0bf24b0358a, type: 3}
-  shootAudio: {fileID: 8300000, guid: 9c2c4605aa1a9f348bd294043165dc14, type: 3}
+  shootAudio: {fileID: 8300000, guid: 9cca96cd06bf2954285d4922207b5a13, type: 3}
+  recharging: {fileID: 8300000, guid: 86fc56d48a9dd5541b99f438b9247733, type: 3}
+  outOfAmmo:
+  - {fileID: 8300000, guid: f16b37d9a93242f4681aacfef89d310a, type: 3}
+  - {fileID: 8300000, guid: a0f5686d6e024f44eb8836531830e193, type: 3}
   audioSource: {fileID: -2694766422095534471}
   gunRange: 30
   fireRate: 2
   fireTimer: 1
   damage: 15
-  bulletsAmount: 27
-  bulletAmountReset: 0
+  reloadTime: 3
+  bulletsLeft: 30
+  magazineCapacity: 30
   bulletHole: {fileID: 2728138223538081298, guid: 35f4589b997fe964e98ad4390c7fae52, type: 3}
+  isReloading: 0
 --- !u!1 &9036700029462812686
 GameObject:
   m_ObjectHideFlags: 0

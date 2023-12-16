@@ -8,6 +8,7 @@ namespace _Scripts
     {
         [SerializeField] private float _maxHealth;
         [SerializeField] private float _currentHealth;
+        [SerializeField] private AudioClip[] _clips;
 
         private void Awake()
         {
