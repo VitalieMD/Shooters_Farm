@@ -95,8 +95,8 @@ namespace _Scripts
             Instantiate(shootEffect, thisPos + transform.forward, Quaternion.identity);
             var rb = Instantiate(projectile, thisPos + transform.forward, Quaternion.identity)
                 .GetComponent<Rigidbody>();
-            rb.AddRelativeForce(transform.forward * 75f, ForceMode.Impulse);
-            rb.AddRelativeForce(transform.up * 3f, ForceMode.Impulse);
+            rb.AddRelativeForce(transform.forward * 5000f * Time.deltaTime, ForceMode.Impulse);
+            rb.AddRelativeForce(transform.up * 200f * Time.deltaTime, ForceMode.Impulse);
             _timer = _timerReset;
         }
 
