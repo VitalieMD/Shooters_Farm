@@ -20,6 +20,7 @@ namespace _Scripts
             _timer,
             _timerReset;
 
+        private float _maxHealth = 100;
         [SerializeField] private GameObject[] _patrolPoint, _instantiatePoints;
         private Vector3 _patrolDestination, thisPos;
         private GameObject _player;
@@ -125,7 +126,7 @@ namespace _Scripts
             transform.position = new Vector3(1000, 1000, 1000);
             yield return new WaitForSeconds(5);
             thisPos = _instantiatePoints[Random.Range(0, _instantiatePoints.Length)].transform.position + transform.up;
-            print(thisPos);
+            _health = _maxHealth;
         }
 
         private void OnDrawGizmos()

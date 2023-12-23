@@ -17,15 +17,16 @@ namespace _Scripts.Shooting
         public AudioClip shootAudio,recharging;
         public AudioClip[] outOfAmmo;
         public AudioSource audioSource;
-        public float gunRange, fireRate, fireTimer, damage, reloadTime;
+        public float gunRange, fireRate, damage, reloadTime;
         public int bulletsLeft, magazineCapacity;
         public GameObject bulletHole;
-        public bool isReloading;
+        public bool isReloading,canShoot;
 
 
         private void Awake()
         {
             playerCamera = Camera.main;
+            canShoot = true;
         }
 
         private void Update()
@@ -47,12 +48,17 @@ namespace _Scripts.Shooting
 
         public void AddBulletMark(RaycastHit hit)
         {
-            print(hit.point.ToString());
             var bulletMark = Instantiate(bulletHole, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(bulletMark.gameObject, 5);
             bulletMark.transform.parent = hit.transform;
         }
 
+        public IEnumerator FireReset(float time)
+        {
+            canShoot = false;
+            yield return new WaitForSeconds(time);
+            canShoot = true;
+        }
         public IEnumerator Reload(float time)
         {
             isReloading = true;

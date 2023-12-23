@@ -154,13 +154,14 @@ MonoBehaviour:
   audioSource: {fileID: 7285755196585512469}
   gunRange: 20
   fireRate: 1
-  fireTimer: 0
+  fireTimer: 0.3
   damage: 120
   reloadTime: 2
   bulletsLeft: 4
   magazineCapacity: 4
   bulletHole: {fileID: 2728138223538081298, guid: 35f4589b997fe964e98ad4390c7fae52, type: 3}
   isReloading: 0
+  canShoot: 0
 --- !u!1 &7274298110543944356
 GameObject:
   m_ObjectHideFlags: 0

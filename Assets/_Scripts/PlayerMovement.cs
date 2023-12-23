@@ -72,18 +72,13 @@ namespace _Scripts
                 velocity.y += gravity * Time.deltaTime;
             else if (velocity.y < 0) velocity.y = -2;
 
+            print(velocity);
             _characterController.Move(velocity * Time.deltaTime);
         }
 
         private void Move(float speed)
         {
             _characterController.Move(moveDir.normalized * (speed * Time.deltaTime));
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.magenta;
-            Gizmos.DrawSphere(spherePos, _characterController.radius - 0.05f);
         }
     }
 }
